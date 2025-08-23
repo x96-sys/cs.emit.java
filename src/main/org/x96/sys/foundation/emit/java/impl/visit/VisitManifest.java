@@ -5,7 +5,7 @@ import org.x96.sys.foundation.cs.ir.manuscript.manifest.characterization.facet.M
 import org.x96.sys.foundation.cs.ir.manuscript.manifest.characterization.facet.Track;
 import org.x96.sys.foundation.emit.java.arch.java.Matrix;
 
-public class VisitManifest  implements Visiting {
+public class VisitManifest implements Visiting {
     private final Manifest t;
 
     public VisitManifest(Manifest t) {
@@ -25,13 +25,13 @@ public class VisitManifest  implements Visiting {
                 m.load(new VisitTrack(track).visit());
             }
         }
-        if(t.characterization().archetype().isPresent()){
+        if (t.characterization().archetype().isPresent()) {
             switch (t.characterization().archetype().get()) {
                 case Ghost -> {
                     m.g("return stream();");
                 }
                 case Shell -> {
-                    m.g("setMod(new org.x96.sys.foundation.cs.ast.book.passage.pattern.modifier.Shell(0x40));");
+                    m.g("setMod(new org.x96.sys.foundation.cs.ast.book.passage.pattern.modifier.Shell((byte) 0x40));");
                     m.g("return stream();");
                 }
             }
