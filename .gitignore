@@ -1,3 +1,7 @@
 lib
 out
+build
+build.xml
+nbproject
+manifest.mf
 *.jar

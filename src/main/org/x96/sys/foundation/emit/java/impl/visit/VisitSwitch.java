@@ -29,6 +29,17 @@ public class VisitSwitch implements Visiting {
         switch (n) {
             case Natural natural -> {
                 m.g("// switch natural");
+                if (Kind.is((byte) natural.b()) == Kind.UNKNOWN) {
+                    throw new UnsupportedOperationException(
+                            String.format("Unsupported byte value %d [0x%X] for LL(1) switch (Kind.UNKNOWN).",
+                                    natural.b(), natural.b()));
+                }
+                byte b = (byte) natural.b();
+                m.i(String.format(
+                        "org.x96.sys.foundation.cs.lexer.visitor.entry.terminals.c%s.%s",
+                        (b & 0xFF) / 0x10,
+                        S.toCamelCase(Kind.is(b).name())));
+                m.g(String.format("switcher.know(%s.class);", (S.toCamelCase(Kind.is(b).name()))));
             }
             case Switch aSwitch -> {
                 m.g("// switch switch");

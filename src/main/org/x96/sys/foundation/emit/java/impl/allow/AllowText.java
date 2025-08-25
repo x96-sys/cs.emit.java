@@ -4,10 +4,23 @@ import org.x96.sys.foundation.cs.ir.manuscript.manifest.characterization.facet.t
 import org.x96.sys.foundation.emit.java.arch.java.Matrix;
 
 public class AllowText implements Allowing {
-    public AllowText(Text text)  {
+    private final Text t;
+
+    public AllowText(Text text) {
+        this.t = text;
     }
+
     @Override
     public Matrix allow() {
-        return new Matrix();
+        Matrix matrix = new Matrix();
+        matrix.g("// text");
+        if (t.raw().length > 1) {
+            throw new UnsupportedOperationException(
+                    String.format(
+                            "LL(1) switch requires 1-byte text; got %d bytes.",
+                            t.raw().length));
+        }
+        matrix.g(String.format("%s == 0x%X", "look()", t.raw()[0]));
+        return matrix;
     }
 }

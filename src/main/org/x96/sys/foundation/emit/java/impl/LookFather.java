@@ -91,7 +91,13 @@ public class LookFather {
     }
 
     private void lookFatherText(Text text) {
-
+        if (text.raw().length > 1) {
+            throw new UnsupportedOperationException(
+                    String.format(
+                            "LL(1) switch requires 1-byte text; got %d bytes.",
+                            text.raw().length));
+        }
+        lookByte(text.raw()[0]);
     }
 
     private void lookFatherTrace(Trace trace) {
