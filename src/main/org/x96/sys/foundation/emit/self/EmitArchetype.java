@@ -15,9 +15,9 @@ public class EmitArchetype extends Emit<Optional<Archetype>> {
     public String toCS() {
         return t.map(kind -> switch (kind) {
             case Ghost ->
-                "_";
+                "_ ";
             case Shell ->
-                "@";
+                "@ ";
             default ->
                 throw new AssertionError(kind.name());
         }).orElse("");

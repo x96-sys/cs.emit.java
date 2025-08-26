@@ -78,7 +78,6 @@ DISTRO_JAR = org.x96.sys.foundation.cs.emit.jar
 
 CP = $(IO_JAR):$(KIND_JAR):$(TOKEN_JAR):$(TOKENIZER_JAR):$(ROUTER_JAR):$(VISITOR_JAR):$(ENTRY_JAR):$(IR_JAR)
 
-
 build: libs clean/build/main
 	@echo "[🦾] Building main sources..."
 	@javac -d $(MAIN_BUILD) -cp $(CP) $(JAVA_SOURCES)
