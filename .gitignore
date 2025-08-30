@@ -1,7 +1,6 @@
 lib
 out
-build
-build.xml
-nbproject
-manifest.mf
+tools
 *.jar
+.idea
+*.iml

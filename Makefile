@@ -8,48 +8,48 @@ SRC_TEST      = src/test
 TOOL_DIR      = tools
 LIB_DIR       = lib
 
-IO_VERSION = 1.0.2
-IO_JAR     = $(LIB_DIR)/org.x96.sys.foundation.io.jar
-IO_URL     = https://github.com/x96-sys/io.java/releases/download/v$(IO_VERSION)/org.x96.sys.foundation.io.jar
-IO_SHA256  = b1d4744f813dfb7a00237de28d5b3b2f5c831d470f8a34901a0c9b4057fd486b
+IO_VERSION = 1.1.0
+IO_BIN     = $(LIB_DIR)/org.x96.sys.io.jar
+IO_URL     = https://github.com/x96-sys/io.java/releases/download/v$(IO_VERSION)/org.x96.sys.io.jar
+IO_SHA256  = e18d2fdb894386bd24bb08f178e4a6566d7feadaaf8e96d32bd6d9c5dc63c474
 
-KIND_VERSION = 0.1.3
-KIND_JAR     = $(LIB_DIR)/org.x96.sys.foundation.cs.lexer.token.kind.jar
-KIND_URL     = https://github.com/x96-sys/cs.lexer.token.kind.java/releases/download/$(KIND_VERSION)/org.x96.sys.foundation.cs.lexer.token.kind.jar
-KIND_SHA256  = 269317df6833c28202d9a695a91a89340c0027d10874d57770f2626a8eb7f5fe
+KIND_VERSION = 1.0.0
+KIND_BIN     = $(LIB_DIR)/org.x96.sys.lexer.token.kind.jar
+KIND_URL     = https://github.com/x96-sys/lexer.token.kind.java/releases/download/v$(KIND_VERSION)/org.x96.sys.lexer.token.kind.jar
+KIND_SHA256  = 55d12618cd548099d138cbc1e7beda2b78e6a09382ec725523e82f7eb5a31c69
 
-TOKEN_VERSION = 0.1.3
-TOKEN_JAR     = $(LIB_DIR)/org.x96.sys.foundation.cs.lexer.token.jar
-TOKEN_URL     = https://github.com/x96-sys/cs.lexer.token.java/releases/download/v$(TOKEN_VERSION)/org.x96.sys.foundation.cs.lexer.token.jar
-TOKEN_SHA256  = 7d25aa60fc975b3830bdd07d12dc4717747e03c9e2a94684d110c3238d540752
+TOKEN_VERSION = 1.0.0
+TOKEN_BIN     = $(LIB_DIR)/org.x96.sys.lexer.token.jar
+TOKEN_URL     = https://github.com/x96-sys/cs.lexer.token.java/releases/download/v$(TOKEN_VERSION)/org.x96.sys.lexer.token.jar
+TOKEN_SHA256  = b58fa314148954ec78d3ead11a434da2670d6d64837807087d2b541190fcf40d
 
-TOKENIZER_VERSION = 0.1.7
-TOKENIZER_JAR     = $(LIB_DIR)/org.x96.sys.foundation.cs.lexer.tokenizer.jar
-TOKENIZER_URL     = https://github.com/x96-sys/cs.lexer.tokenizer.java/releases/download/v$(TOKENIZER_VERSION)/org.x96.sys.foundation.cs.lexer.tokenizer.jar
-TOKENIZER_SHA256  = 9f32f2e879c06dc7479ea1509bedb794b3bdb189e2c80284d8fd18b95f8ab2df
+TOKENIZER_VERSION = 1.0.0
+TOKENIZER_BIN     = $(LIB_DIR)/org.x96.sys.lexer.tokenizer.jar
+TOKENIZER_URL     = https://github.com/x96-sys/lexer.tokenizer.java/releases/download/v$(TOKENIZER_VERSION)/org.x96.sys.lexer.tokenizer.jar
+TOKENIZER_SHA256  = 21a10167ffd798f1fa9cbbda1382650a411c826b957bf3cc607863696bf4e8f7
 
-ROUTER_VERSION = 0.1.4
-ROUTER_JAR     = $(LIB_DIR)/org.x96.sys.foundation.cs.lexer.router.jar
-ROUTER_URL     = https://github.com/x96-sys/cs.lexer.router.java/releases/download/v$(ROUTER_VERSION)/org.x96.sys.foundation.cs.lexer.router.jar
-ROUTER_SHA256  = 1a5e0736a4928a509843daf9edb936b730e7264cd23836fb3a750a83e3888e9a
+ROUTER_VERSION = 1.0.0
+ROUTER_BIN     = $(LIB_DIR)/org.x96.sys.lexer.router.jar
+ROUTER_URL     = https://github.com/x96-sys/lexer.router.java/releases/download/v$(ROUTER_VERSION)/org.x96.sys.lexer.router.jar
+ROUTER_SHA256  = 575aab309a0f75e0ca9f9a6523c07bafcfeb2314dfa5c5482326c832d4bf63c6
 
-VISITOR_VERSION = 0.1.6
-VISITOR_JAR     = $(LIB_DIR)/org.x96.sys.foundation.cs.lexer.visitor.jar
-VISITOR_URL     = https://github.com/x96-sys/cs.lexer.visitor.java/releases/download/v$(VISITOR_VERSION)/org.x96.sys.foundation.cs.lexer.visitor.jar
-VISITOR_SHA256  = 309c5f1eb169dacb184a95a57cb8d513f5daabbcdaa3ba092f04f332236a7467
+VISITOR_VERSION = 1.0.0
+VISITOR_BIN     = $(LIB_DIR)/org.x96.sys.lexer.visitor.jar
+VISITOR_URL     = https://github.com/x96-sys/lexer.visitor.java/releases/download/v$(VISITOR_VERSION)/org.x96.sys.lexer.visitor.jar
+VISITOR_SHA256  = 2ae4d8669d15c965e30053a7d92a362ea1136c3ef3c3bacdcb9dbbc347bc977e
 
-ENTRY_VERSION = 0.1.3
-ENTRY_JAR     = $(LIB_DIR)/org.x96.sys.foundation.cs.lexer.entry.jar
-ENTRY_URL     = https://github.com/x96-sys/cs.lexer.visitor.entry.java/releases/download/v$(ENTRY_VERSION)/org.x96.sys.foundation.cs.lexer.entry.jar
-ENTRY_SHA256  = c4b88c7836d8123714ca2d1cc373b43439db19fa9052b6159d987e6622b461bb
+ENTRY_VERSION = 1.0.0
+ENTRY_BIN     = $(LIB_DIR)/org.x96.sys.lexer.entry.jar
+ENTRY_URL     = https://github.com/x96-sys/lexer.visitor.entry.java/releases/download/v$(ENTRY_VERSION)/org.x96.sys.lexer.entry.jar
+ENTRY_SHA256  = e706396e6d3fdbd69d529a0d5cbd4597699bd7f7d85f563983ee87e4d4fa90b4
 
-IR_VERSION = 0.1.2
-IR_JAR     = $(LIB_DIR)/org.x96.sys.foundation.cs.ir.jar
-IR_URL     = https://github.com/x96-sys/cs.ir.java/releases/download/v$(IR_VERSION)/org.x96.sys.foundation.cs.ir.jar
-IR_SHA256  = 14f6af5e59c491a3e7ca92b3753ba28015a1f52e185e3cca768b8af403fe0d41
+CS_IR_VERSION = 1.0.0
+CS_IR_BIN     = $(LIB_DIR)/org.x96.sys.cs.ir.jar
+CS_IR_URL     = https://github.com/x96-sys/cs.ir.java/releases/download/v$(CS_IR_VERSION)/org.x96.sys.cs.ir.jar
+CS_IR_SHA256  = 7a16e2bb1e64ac3465ec270d0a583ae9c069faf1e457d6fef98b7f5154623d21
 
 JUNIT_VERSION = 1.13.4
-JUNIT_JAR     = $(TOOL_DIR)/junit-platform-console-standalone.jar
+JUNIT_BIN     = $(TOOL_DIR)/junit-platform-console-standalone.jar
 JUNIT_URL     = https://maven.org/maven2/org/junit/platform/junit-platform-console-standalone/$(JUNIT_VERSION)/junit-platform-console-standalone-$(JUNIT_VERSION).jar
 JUNIT_SHA256  = 3fdfc37e29744a9a67dd5365e81467e26fbde0b7aa204e6f8bbe79eeaa7ae892
 
@@ -57,26 +57,26 @@ JACOCO_VERSION = 0.8.13
 JACOCO_BASE    = https://maven.org/maven2/org/jacoco
 
 JACOCO_CLI_VERSION = $(JACOCO_VERSION)
-JACOCO_CLI_JAR     = $(TOOL_DIR)/jacococli.jar
+JACOCO_CLI_BIN     = $(TOOL_DIR)/jacococli.jar
 JACOCO_CLI_URL     = $(JACOCO_BASE)/org.jacoco.cli/$(JACOCO_CLI_VERSION)/org.jacoco.cli-$(JACOCO_CLI_VERSION)-nodeps.jar
 JACOCO_CLI_SHA256  = 8f748683833d4dc4d72cea5d6b43f49344687b831e0582c97bcb9b984e3de0a3
 
 JACOCO_AGENT_VERSION = $(JACOCO_VERSION)
-JACOCO_AGENT_JAR     = $(TOOL_DIR)/jacocoagent-runtime.jar
+JACOCO_AGENT_BIN     = $(TOOL_DIR)/jacocoagent-runtime.jar
 JACOCO_AGENT_URL     = $(JACOCO_BASE)/org.jacoco.agent/$(JACOCO_AGENT_VERSION)/org.jacoco.agent-$(JACOCO_AGENT_VERSION)-runtime.jar
 JACOCO_AGENT_SHA256  = 47e700ccb0fdb9e27c5241353f8161938f4e53c3561dd35e063c5fe88dc3349b
 
 GJF_VERSION = 1.28.0
-GJF_JAR     = $(TOOL_DIR)/google-java-format.jar
+GJF_BIN     = $(TOOL_DIR)/google-java-format.jar
 GJF_URL     = https://maven.org/maven2/com/google/googlejavaformat/google-java-format/$(GJF_VERSION)/google-java-format-$(GJF_VERSION)-all-deps.jar
 GJF_SHA256  = 32342e7c1b4600f80df3471da46aee8012d3e1445d5ea1be1fb71289b07cc735
 
 JAVA_SOURCES := $(shell find $(SRC_MAIN) -name "*.java")
 JAVA_TEST_SOURCES := $(shell find $(SRC_TEST) -name "*.java")
 
-DISTRO_JAR = org.x96.sys.foundation.cs.emit.jar
+DISTRO_BIN = org.x96.sys.cs.emit.jar
 
-CP = $(IO_JAR):$(KIND_JAR):$(TOKEN_JAR):$(TOKENIZER_JAR):$(ROUTER_JAR):$(VISITOR_JAR):$(ENTRY_JAR):$(IR_JAR)
+CP = $(IO_BIN):$(KIND_BIN):$(TOKEN_BIN):$(TOKENIZER_BIN):$(ROUTER_BIN):$(VISITOR_BIN):$(ENTRY_BIN):$(CS_IR_BIN)
 
 build: libs clean/build/main
 	@echo "[🦾] Building main sources..."
@@ -85,11 +85,11 @@ build: libs clean/build/main
 
 build/test: kit build clean/build/test
 	@echo "[🧪] Building test sources..."
-	@javac -cp $(JUNIT_JAR):$(MAIN_BUILD):$(CP) -d $(TEST_BUILD) $(JAVA_TEST_SOURCES)
+	@javac -cp $(JUNIT_BIN):$(MAIN_BUILD):$(CP) -d $(TEST_BUILD) $(JAVA_TEST_SOURCES)
 	@echo "[✅] Test sources built successfully."
 
 test: build/test
-	@java -jar $(JUNIT_JAR) \
+	@java -jar $(JUNIT_BIN) \
 	   execute \
 	   --class-path $(TEST_BUILD):$(MAIN_BUILD):$(CLI_BUILD):$(CP) \
 	   --scan-class-path
@@ -99,13 +99,13 @@ COVERAGE_REPORT = $(BUILD_DIR)/coverage
 
 coverage: build/test $(COVERAGE_REPORT)
 	@echo "[📊] Running tests with JaCoCo agent..."
-	@java -javaagent:$(JACOCO_AGENT_JAR)=destfile=$(COVERAGE_EXEC) \
-		-jar $(JUNIT_JAR) \
+	@java -javaagent:$(JACOCO_AGENT_BIN)=destfile=$(COVERAGE_EXEC) \
+		-jar $(JUNIT_BIN) \
 		execute \
 		--class-path $(TEST_BUILD):$(MAIN_BUILD):$(CP) \
 		--scan-class-path
 	@echo "[📑] Generating coverage report..."
-	@java -jar $(JACOCO_CLI_JAR) report $(COVERAGE_EXEC) \
+	@java -jar $(JACOCO_CLI_BIN) report $(COVERAGE_EXEC) \
 		--classfiles $(MAIN_BUILD) \
 		--sourcefiles $(SRC_MAIN) \
 		--html $(COVERAGE_REPORT) \
@@ -116,25 +116,25 @@ coverage: build/test $(COVERAGE_REPORT)
 define deps
 $1/$2: $1
 	@expected="$($3_SHA256)"; \
-	jar="$($3_JAR)"; \
+	bin="$($3_BIN)"; \
 	url="$($3_URL)"; \
 	tmp="$$$$(mktemp)"; \
-	if [ ! -f "$$$$jar" ]; then \
+	if [ ! -f "$$$$bin" ]; then \
 		echo "[📦] [🚛] [$($3_VERSION)] [$2]"; \
 		curl -sSL -o "$$$$tmp" "$$$$url"; \
 		actual="$$$$(shasum -a 256 $$$$tmp | awk '{print $$$$1}')"; \
-		if [ "$$$$expected" = "$$$$actual" ]; then mv "$$$$tmp" "$$$$jar"; \
+		if [ "$$$$expected" = "$$$$actual" ]; then mv "$$$$tmp" "$$$$bin"; \
 		echo "[📦] [📍] [$($3_VERSION)] [$2] [🐚]"; else rm "$$$$tmp"; \
 		echo "[❌] [hash mismatch] [$2]"; exit 1; fi; \
 	else \
-		actual="$$$$(shasum -a 256 $$$$jar | awk '{print $$$$1}')"; \
+		actual="$$$$(shasum -a 256 $$$$bin | awk '{print $$$$1}')"; \
 		if [ "$$$$expected" = "$$$$actual" ]; \
 		then echo "[📦] [📍] [$($3_VERSION)] [🐚] [$2]"; \
 		else \
 			echo "[❌] [hash mismatch] [$2]"; \
 			curl -sSL -o "$$$$tmp" "$$$$url"; \
 			actual="$$$$(shasum -a 256 $$$$tmp | awk '{print $$$$1}')"; \
-			if [ "$$$$expected" = "$$$$actual" ]; then mv "$$$$tmp" "$$$$jar"; \
+			if [ "$$$$expected" = "$$$$actual" ]; then mv "$$$$tmp" "$$$$bin"; \
 			echo "[📦] [♻️] [$($3_VERSION)] [🐚] [$2]"; else rm "$$$$tmp"; \
 			echo "[❌] [download failed] [$2]"; exit 1; fi; \
 		fi; \
@@ -148,7 +148,7 @@ $(eval $(call deps,$(LIB_DIR),tokenizer,TOKENIZER))
 $(eval $(call deps,$(LIB_DIR),router,ROUTER))
 $(eval $(call deps,$(LIB_DIR),visitor,VISITOR))
 $(eval $(call deps,$(LIB_DIR),entry,ENTRY))
-$(eval $(call deps,$(LIB_DIR),ir,IR))
+$(eval $(call deps,$(LIB_DIR),ir,CS_IR))
 
 libs: \
 	$(LIB_DIR)/io \
@@ -175,7 +175,7 @@ $(TOOL_DIR) $(LIB_DIR) $(COVERAGE_REPORT):
 	@mkdir -p $@
 
 distro:
-	jar cf $(DISTRO_JAR) -C $(MAIN_BUILD) .
+	jar cf $(DISTRO_BIN) -C $(MAIN_BUILD) .
 
 clean/build:
 	@rm -rf $(BUILD_DIR)

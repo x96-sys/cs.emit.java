@@ -1,0 +1,22 @@
+package org.x96.sys.cs.emit.java.arch.java;
+
+import org.junit.jupiter.api.Test;
+import org.x96.sys.cs.emit.java.arch.java.Matrix;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+class MatrixTest {
+    @Test
+    void happy(){
+        Matrix matrix = new Matrix();
+        matrix.setTag("visit");
+        matrix.setFeedback("Token[]");
+        matrix.g("true");
+        assertEquals("""
+                    @Override
+                    public Token[] visit() {
+                        true
+                    }
+                """, matrix.printSource());
+    }
+}
