@@ -21,12 +21,13 @@ public interface Allowing {
                     return false;
                 } else {
                     if (term.occurrence().isPresent()) {
-                        if (term.occurrence().get() == Occurrence.ZeroOrOne) {
-                            matrix.g("||");
-                            return false;
-                        } else {
-                            return true;
-                        }
+                        return switch (term.occurrence().get()) {
+                            case ZeroOrOne, ZeroOrMore -> {
+                                matrix.g("||");
+                                yield false;
+                            }
+                            default -> true;
+                        };
                     } else {
                         return true;
                     }
