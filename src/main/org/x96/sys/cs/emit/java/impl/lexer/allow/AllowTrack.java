@@ -14,13 +14,14 @@ public class AllowTrack implements Allowing {
     @Override
     public Matrix allow() {
         Matrix matrix = new Matrix();
-        for (Nucleus n : track.nuclei()) {
+        for (int i = 0; i < track.nuclei().length; i++) {
+            Nucleus n = track.nuclei()[i];
+            boolean isLast = i == track.nuclei().length - 1;
             matrix.load(new AllowNucleus(n).allow());
-            if (isFinished(matrix, n)) {
+            if (isLast || isFinished(matrix, n)) {
                 return matrix;
             }
         }
         return matrix;
     }
-
 }

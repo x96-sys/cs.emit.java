@@ -14,16 +14,50 @@ import org.x96.sys.cs.ir.manuscript.manifest.characterization.facet.terminals.Te
 import java.util.Optional;
 
 import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class AllowManifestTest {
 
     @Test
-    void happy(){
-        Manifest m = new Manifest(new Identity("pair".getBytes()), new Characterization(Optional.empty(), new Track(new Nucleus[]{
-                new Term(false, new Identity("primor".getBytes()), Optional.of(Occurrence.ZeroOrOne)),
-                new Term(false, new Identity("i".getBytes()), Optional.of(Occurrence.ZeroOrMore)),
-                new Term(false, new Identity("typo".getBytes()), Optional.empty()),
-        })));
+    void happyOptional() {
+        Manifest m = new Manifest(new Identity("attribute".getBytes()),
+                new Characterization(Optional.empty(), new Track(new Nucleus[] {
+                        new Term(false, new Identity("mod_attribute".getBytes()), Optional.of(Occurrence.ZeroOrOne)),
+                        new Term(false, new Identity("i".getBytes()), Optional.of(Occurrence.ZeroOrMore)),
+                        new Term(false, new Identity("primor".getBytes()), Optional.of(Occurrence.ZeroOrOne)),
+                })));
+        assertEquals("attribute = mod_attribute? i* primor?;", new EmitManifest(m).toCS());
+        AllowManifest am = new AllowManifest(m);
+        Matrix allow = am.allow();
+        assertEquals("""
+                    @Override
+                    public boolean allowed() {
+                        return
+                        // track
+                        // nucleus
+                        // term
+                        new ModAttribute(tokenizer).allowed()
+                        ||
+                        // nucleus
+                        // term
+                        new I(tokenizer).allowed()
+                        ||
+                        // nucleus
+                        // term
+                        new Primor(tokenizer).allowed()
+                        ;
+                    }
+                """, allow.emitSource());
+    }
+
+    @Test
+    void happy() {
+        Manifest m = new Manifest(new Identity("pair".getBytes()),
+                new Characterization(Optional.empty(), new Track(new Nucleus[] {
+                        new Term(false, new Identity("primor".getBytes()), Optional.of(Occurrence.ZeroOrOne)),
+                        new Term(false, new Identity("i".getBytes()), Optional.of(Occurrence.ZeroOrMore)),
+                        new Term(false, new Identity("typo".getBytes()), Optional.empty()),
+                })));
 
         assertEquals("pair = primor? i* typo;", new EmitManifest(m).toCS());
 

@@ -14,13 +14,14 @@ public class AllowMesh implements Allowing {
     @Override
     public Matrix allow() {
         Matrix matrix = new Matrix();
-        for (Nucleus n : mesh.nuclei()) {
+        for (int i = 0; i < mesh.nuclei().length; i++) {
+            Nucleus n = mesh.nuclei()[i];
+            boolean isLast = i == mesh.nuclei().length - 1;
             matrix.load(new AllowNucleus(n).allow());
-            if (isFinished(matrix, n)) {
+            if (isLast || isFinished(matrix, n)) {
                 return matrix;
             }
         }
         return matrix;
     }
-
 }
