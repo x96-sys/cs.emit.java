@@ -4,7 +4,6 @@
  */
 package org.x96.sys.cs.emit.java.arch.java;
 
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -45,14 +44,29 @@ public class Matrix {
         return String.format("%s%n", printSource());
     }
 
+    /**
+     * @deprecated Use {@link #emitSource()} em vez deste.
+     */
+    @Deprecated
     public String printSource() {
         return String.format(
                 """
-                    @Override
-                    public %s %s() {
-                        %s
-                    }
-                """,
+                            @Override
+                            public %s %s() {
+                                %s
+                            }
+                        """,
+                this.feedback, this.tag, String.join("\n        ", this.signals));
+    }
+
+    public String emitSource() {
+        return String.format(
+                """
+                            @Override
+                            public %s %s() {
+                                %s
+                            }
+                        """,
                 this.feedback, this.tag, String.join("\n        ", this.signals));
     }
 }
